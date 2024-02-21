@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: nodejs-health-check-ydta
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nodejs-health-check-ydta
+    app.kubernetes.io/part-of: e2e-nodejs
+  name: nodejs-health-check-ydtaavkj
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: nodejs-health-check-ydta
+    weight: null
+status: {}
