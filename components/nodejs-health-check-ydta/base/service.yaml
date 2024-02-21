@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: nodejs-health-check-ydta
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nodejs-health-check-ydta
+    app.kubernetes.io/part-of: e2e-nodejs
+  name: nodejs-health-check-ydta
+spec:
+  ports:
+  - name: http-3001
+    port: 3001
+    protocol: TCP
+    targetPort: 3001
+  selector:
+    app: nodejs-app
+    app.kubernetes.io/instance: nodejs-health-check-ydta
+status:
+  loadBalancer: {}
