@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: nodejs-health-check-ydta
     spec:
       containers:
-      - image: nodejs-image:latest
+      - image: quay.io/redhat-appstudio-qe/rhtap-demo-ijes-tenant/e2e-nodejs/nodejs-health-check-ydta@sha256:40fe39368ad8e04fab2dab1c1f1e462a61870b8a1c4d6fe2e5bbe2e83671f19f
         name: my-nodejs
         ports:
         - containerPort: 3001
